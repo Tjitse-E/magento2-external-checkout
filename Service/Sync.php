@@ -1,12 +1,7 @@
 <?php
-/**
- * @package   Divante\CartSync
- * @author    Mateusz Bukowski <mbukowski@divante.pl>
- * @copyright 2018 Divante Sp. z o.o.
- * @license   See LICENSE_DIVANTE.txt for license details.
- */
+declare(strict_types=1);
 
-namespace Divante\CartSync\Service;
+namespace VueStorefront\CartSync\Service;
 
 use Magento\Checkout\Model\Session;
 use Magento\Customer\Api\CustomerRepositoryInterface;
@@ -82,8 +77,7 @@ class Sync implements SyncInterface
         QuoteIdMaskFactory $quoteIdMaskFactory,
         QuoteFactory $quoteFactory,
         QuoteRepository $quoteRepository
-    )
-    {
+    ) {
         $this->cartRepository     = $cartRepository;
         $this->checkoutSession    = $checkoutSession;
         $this->customerRepository = $customerRepository;

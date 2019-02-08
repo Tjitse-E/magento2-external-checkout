@@ -1,28 +1,21 @@
 {
-  "name": "divante/magento2-vue-cart-sync",
+  "name": "vuestorefront/magento2-vue-cart-sync",
   "description": "Synchronize Magento cart between Vue Storefront",
   "require": {
-    "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
-    "magento/module-store": "100.2.*",
-    "magento/module-customer": "101.0.*",
-    "magento/module-authorization": "100.2.*",
-    "magento/module-checkout": "100.2.*",
-    "magento/module-backend": "100.2.*",
-    "magento/module-eav": "101.0.*",
-    "magento/module-config": "101.0.*",
-    "magento/framework": "101.0.*",
-    "magento/module-quote": "101.0.*"
+    "php": "~/7.1|~7.2",
+    "magento/magento2-base": "~2.2|~2.3"
   },
   "type": "magento2-module",
-  "version": "1.0.0",
-  "license": [
-    "OSL-3.0",
-    "AFL-3.0"
-  ],
+  "version": "2.0.0",
+  "license": "MIT",
   "authors": [
     {
       "name": "Mateusz Bukowski",
       "email": "mbukowski@divante.pl"
+    },
+    {
+      "name": "Tjitse Efde",
+      "email": "tjitse@vendic.nl"
     }
   ],
   "autoload": {
@@ -30,7 +23,10 @@
       "registration.php"
     ],
     "psr-4": {
-      "Divante\\CartSync\\": ""
+      "VueStorefront\\CartSync\\": ""
     }
+  },
+  "suggest": {
+    "vendic/magento2-checkoutonly": "A module that enables you to limit access only the Magento checkout. Usefull for a PWA setup that uses the default Magento 2 checkout"
   }
 }
